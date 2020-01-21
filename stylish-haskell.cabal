@@ -31,6 +31,7 @@ Library
     Language.Haskell.Stylish
     Language.Haskell.Stylish.Step.Imports
     Language.Haskell.Stylish.Step.LanguagePragmas
+    Language.Haskell.Stylish.Step.SimFormat
     Language.Haskell.Stylish.Step.SimpleAlign
     Language.Haskell.Stylish.Step.Squash
     Language.Haskell.Stylish.Step.Tabs
@@ -62,6 +63,7 @@ Library
     haskell-src-exts >= 1.18   && < 1.24,
     mtl              >= 2.0    && < 2.3,
     semigroups       >= 0.18   && < 0.20,
+    simformat        >= 0      && < 0.1,
     syb              >= 0.3    && < 0.8,
     yaml             >= 0.8.11 && < 0.12
 

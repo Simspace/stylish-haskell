@@ -5,3 +5,5 @@ packages:
 extra-deps:
 - 'Cabal-3.0.0.0'
 - 'haskell-src-exts-1.23.0'
+- git: git@github.com:Simspace/simformat.git
+  commit: ee8f8a838d7ef889790b5fa34df5c4567ab0d22c

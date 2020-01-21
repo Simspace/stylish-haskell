@@ -37,6 +37,7 @@ import           Language.Haskell.Stylish.Config.Internal
 import           Language.Haskell.Stylish.Step
 import qualified Language.Haskell.Stylish.Step.Imports            as Imports
 import qualified Language.Haskell.Stylish.Step.LanguagePragmas    as LanguagePragmas
+import qualified Language.Haskell.Stylish.Step.SimFormat          as SimFormat
 import qualified Language.Haskell.Stylish.Step.SimpleAlign        as SimpleAlign
 import qualified Language.Haskell.Stylish.Step.Squash             as Squash
 import qualified Language.Haskell.Stylish.Step.Tabs               as Tabs
@@ -147,6 +148,7 @@ catalog = M.fromList
     , ("tabs",                parseTabs)
     , ("trailing_whitespace", parseTrailingWhitespace)
     , ("unicode_syntax",      parseUnicodeSyntax)
+    , ("simformat",           parseSimformat)
     ]
 
 
@@ -184,6 +186,11 @@ parseSimpleAlign c o = SimpleAlign.step
 --------------------------------------------------------------------------------
 parseSquash :: Config -> A.Object -> A.Parser Step
 parseSquash _ _ = return Squash.step
+
+
+--------------------------------------------------------------------------------
+parseSimformat :: Config -> A.Object -> A.Parser Step
+parseSimformat _ _ = pure SimFormat.step
 
 
 --------------------------------------------------------------------------------
